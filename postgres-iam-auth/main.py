@@ -37,17 +37,16 @@ def create_db_pool():
 
 pool = create_db_pool()
 
-
 @app.route("/", methods=["GET"])
 def health():
     with pool.connect() as db_conn:
         result = db_conn.execute(
-            sqlalchemy.text("SELECT NOW()")
-        ).fetchone()
+            sqlalchemy.text("SELECT name FROM test")
+        ).fetchall()
 
     return jsonify({
         "status": "ok",
-        "current_time": str(result[0])
+        "names": [row[0] for row in result]
     })
 
 
