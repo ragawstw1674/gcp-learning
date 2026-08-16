@@ -24,6 +24,7 @@ Roles:
 
 #### 3. Add cloudrun serviceaccount to postgres db:
    <img src="../images/add-serviceaccount-to-postgres.png" />
+   <img src="../images/add-iam-user.png" />
 
 #### 4. Code:
   > Doc: https://docs.cloud.google.com/sql/docs/postgres/iam-logins#python
