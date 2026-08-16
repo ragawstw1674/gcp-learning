@@ -1,5 +1,7 @@
 1. Grant permissions to servcieaccount 
-    # https://docs.cloud.google.com/sql/docs/postgres/iam-logins#python 
+    # https://docs.cloud.google.com/sql/docs/postgres/add-manage-iam-users#add-policy-binding
+    -> roles/cloudsql.instanceUser
+    -> roles/cloudsql.client
 
 # Doc: https://docs.cloud.google.com/sql/docs/postgres/add-manage-iam-users#add-db-roles
 2. Create role which will be assigned to serviceaccount user:
