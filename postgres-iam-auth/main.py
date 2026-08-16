@@ -78,14 +78,8 @@ def create_db_pool():
 
 pool = create_db_pool()
 
-@app.route("/version", methods=["GET"])
-def health():
-    return jsonify({
-        "status": "ok",
-        "version": "v2"
-    })
 
-@app.route("/health", methods=["GET"])
+@app.route("/", methods=["GET"])
 def health():
     with pool.connect() as db_conn:
         result = db_conn.execute(
