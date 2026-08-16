@@ -85,7 +85,7 @@ def health():
         "version": "v2"
     })
 
-@app.route("/", methods=["GET"])
+@app.route("/health", methods=["GET"])
 def health():
     with pool.connect() as db_conn:
         result = db_conn.execute(
