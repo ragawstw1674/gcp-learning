@@ -1,4 +1,6 @@
-#### 1. Grant permissions to servcieaccount 
+### IAM AUTH Postgres:
+
+#### 1. Grant permissions to serviceaccount 
   > Doc: https://docs.cloud.google.com/sql/docs/postgres/add-manage-iam-users#add-policy-binding
 
 Roles:
@@ -6,8 +8,7 @@ Roles:
   2. roles/cloudsql.client
 
 
-
-#### 2.  Create role which will be assigned to serviceaccount user: 
+#### 2.  Create database role which will be assigned to serviceaccount user: 
   > Doc: https://docs.cloud.google.com/sql/docs/postgres/add-manage-iam-users#add-db-roles
     
 ```sql
@@ -21,8 +22,8 @@ Roles:
 ```
 
 
-#### 3. Add serviceaccount to postgres
+#### 3. Add cloudrun serviceaccount to postgres db:
    <img src="../images/add-serviceaccount-to-postgres.png" />
 
-#### 4. Code 
+#### 4. Code:
   > Doc: https://docs.cloud.google.com/sql/docs/postgres/iam-logins#python
