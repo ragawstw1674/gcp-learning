@@ -1,10 +1,11 @@
-#### Grant permissions to servcieaccount 
+#### 1. Grant permissions to servcieaccount 
   > Doc: https://docs.cloud.google.com/sql/docs/postgres/add-manage-iam-users#add-policy-binding
     -> roles/cloudsql.instanceUser
     -> roles/cloudsql.client
 
 
-#### Create role which will be assigned to serviceaccount user: 
+
+#### 2.  Create role which will be assigned to serviceaccount user: 
   > Doc: https://docs.cloud.google.com/sql/docs/postgres/add-manage-iam-users#add-db-roles
     
 ```sql
@@ -17,7 +18,9 @@
     ALTER ROLE "<cloudrun-service-account>" SET role = approle;
 ```
 
-#### Add serviceaccount to postgres
-   
-#### Code 
+
+#### 3. Add serviceaccount to postgres
+
+
+#### 4. Code 
   > Doc: https://docs.cloud.google.com/sql/docs/postgres/iam-logins#python
