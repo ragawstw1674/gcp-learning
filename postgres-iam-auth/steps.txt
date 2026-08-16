@@ -8,7 +8,9 @@
     GRANT approle TO postgres;
     ALTER DATABASE appdb OWNER TO approle;
     GRANT CONNECT ON DATABASE appdb to approle;
-    GRANT USAGE ON SCHEMA public TO  approle;
+    GRANT USAGE ON SCHEMA public TO approle;
+    ALTER ROLE "<cloudrun-service-account>" SET role = approle;
+
 
 3. add serviceaccount to postgres
    
