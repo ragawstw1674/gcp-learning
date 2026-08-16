@@ -1,8 +1,8 @@
 #### 1. Grant permissions to servcieaccount 
   > Doc: https://docs.cloud.google.com/sql/docs/postgres/add-manage-iam-users#add-policy-binding
 
-    -> roles/cloudsql.instanceUser
-    -> roles/cloudsql.client
+  -> roles/cloudsql.instanceUser
+  -> roles/cloudsql.client
 
 
 
@@ -21,7 +21,7 @@
 
 
 #### 3. Add serviceaccount to postgres
-
+   <img src="../images/add-serviceaccount-to-postgres.png" />
 
 #### 4. Code 
   > Doc: https://docs.cloud.google.com/sql/docs/postgres/iam-logins#python
