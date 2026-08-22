@@ -7,6 +7,7 @@ resource "google_bigquery_dataset" "test_dataset" {
 resource "google_bigquery_table" "test_table" {
   dataset_id = google_bigquery_dataset.test_dataset.dataset_id
   table_id   = "test"
+  deletion_protection = false ## should be true (just for demo - false)
   schema = <<EOF
 [
   {

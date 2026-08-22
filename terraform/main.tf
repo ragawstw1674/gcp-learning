@@ -2,6 +2,7 @@ resource "google_cloud_run_v2_service" "bigquery" {
   depends_on = [
     google_bigquery_table.test_table
   ]
+  deletion_protection = false ## should be true (just for demo - false)
   name     = "bigquery-sample-api"
   location =  "asia-south2"
   ingress  = "INGRESS_TRAFFIC_ALL"
