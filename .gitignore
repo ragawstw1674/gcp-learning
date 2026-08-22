@@ -1,2 +1,6 @@
 .venv
 my.txt
+**/*.tfstate
+**/.terraform
+**.lock.hcl
+**/*.tfstate.backup
